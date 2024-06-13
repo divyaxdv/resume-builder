@@ -2,10 +2,13 @@ import React from "react";
 
 import resumeSvg from "../../assets/resume.svg";
 
-import styles from "./Header.module.css";
+import styles from "./landing.module.css";
+import NavBar from "../Navbar";
 
 function Header() {
   return (
+    <>
+    <NavBar />
     <div className={styles.container}>
       <div className={styles.left}>
         <p className={styles.heading}>
@@ -19,6 +22,7 @@ function Header() {
         <img src={resumeSvg} alt="Resume" />
       </div>
     </div>
+    </>
   );
 }
 

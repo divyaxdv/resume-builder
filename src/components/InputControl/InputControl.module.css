@@ -17,10 +17,10 @@ input {
   border-radius: 5px;
 }
 
-input:hover {
+.container :hover {
   border: 1px solid #adadad;
 }
 
-input:focus {
+.container :focus {
   border: 1px solid #239ce2;
 }
