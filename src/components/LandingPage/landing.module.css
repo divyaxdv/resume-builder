@@ -5,16 +5,17 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 30px;
   background-color: rgb(238, 252, 255);
   min-height: 85vh;
   margin-bottom: 40px;
 }
 
+
 .heading {
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 700 px;
   color: #000;
   font-size: 3.1rem;
   line-height: 4.1rem;
@@ -24,10 +25,35 @@
 
 .heading span {
   background-clip: text;
-  background-image: linear-gradient(to right, #239ce2, #1369b9);
+  -webkit-background-clip: text;
   color: transparent;
+  background-image: linear-gradient(to right, #99c2f5,#82c6ee , #d9a0f8,#63a1ec);
+  animation: gradientMove 3s infinite;
+  background-size: 200% 100%;
+  display: inline-block;
 }
 
-.right img {
-  width: 400px;
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .heading {
+    font-size: 1.5em; /* Slightly smaller text for smaller screens */
+  }
+
+  .container {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+
